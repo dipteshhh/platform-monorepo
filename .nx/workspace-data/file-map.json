@@ -41,67 +41,114 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".DS_Store",
-        "hash": "5160396983343536947"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "16023894880854878455"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
-      },
-      {
         "file": "pnpm-lock.yaml",
         "hash": "2390433407037106180"
+      },
+      {
+        "file": ".github/instructions/nx.instructions.md",
+        "hash": "18365136242425077636"
       },
       {
         "file": "nx.json",
         "hash": "2767877594474709220"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "5952729833988513149"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "5606483387161516153"
-      },
-      {
         "file": "pnpm-workspace.yaml",
         "hash": "414265049992887245"
       },
       {
-        "file": "vitest.workspace.ts",
-        "hash": "4665328684042819579"
-      },
-      {
-        "file": "packages/.DS_Store",
-        "hash": "466342039066740337"
-      },
-      {
-        "file": "package.json",
-        "hash": "8946584189002092523"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "7859791200992673831"
-      },
-      {
-        "file": "eslint.config.mjs",
-        "hash": "8944620160701465"
+        "file": ".env.local",
+        "hash": "657851185996776559"
       },
       {
         "file": ".prettierignore",
         "hash": "14688272390704683536"
       },
       {
-        "file": ".github/instructions/nx.instructions.md",
-        "hash": "18365136242425077636"
+        "file": "tsconfig.base.json",
+        "hash": "5952729833988513149"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "8944620160701465"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "7859791200992673831"
+      },
+      {
+        "file": "package.json",
+        "hash": "8946584189002092523"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "5606483387161516153"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "16971972669338936426"
+      },
+      {
+        "file": "vitest.workspace.ts",
+        "hash": "4665328684042819579"
       }
     ],
     "projectFileMap": {
+      "@platform-monorepo/core": [
+        {
+          "file": "packages/core/README.md",
+          "hash": "4369172407730148539"
+        },
+        {
+          "file": "packages/core/eslint.config.mjs",
+          "hash": "2713748763965609622",
+          "deps": [
+            [
+              "npm:jsonc-eslint-parser",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "packages/core/package.json",
+          "hash": "12967926382521954505"
+        },
+        {
+          "file": "packages/core/src/index.ts",
+          "hash": "6199817678954938714"
+        },
+        {
+          "file": "packages/core/src/lib/crud-store.interface.ts",
+          "hash": "1912228538851268810"
+        },
+        {
+          "file": "packages/core/src/lib/domain-model.interface.ts",
+          "hash": "3006072110361718485"
+        },
+        {
+          "file": "packages/core/tsconfig.json",
+          "hash": "12834038490315927699"
+        },
+        {
+          "file": "packages/core/tsconfig.lib.json",
+          "hash": "15299785940044794528"
+        },
+        {
+          "file": "packages/core/tsconfig.spec.json",
+          "hash": "12757693314151657395"
+        },
+        {
+          "file": "packages/core/vite.config.ts",
+          "hash": "9403270702477991712",
+          "deps": [
+            "npm:vite"
+          ]
+        }
+      ],
       "@platform-monorepo/firebase": [
         {
           "file": "packages/firebase/README.md",
@@ -127,7 +174,22 @@
         },
         {
           "file": "packages/firebase/src/index.ts",
-          "hash": "12512580039370145651"
+          "hash": "6372099802458739378"
+        },
+        {
+          "file": "packages/firebase/src/lib/firebase.config.ts",
+          "hash": "14788420712760685394",
+          "deps": [
+            "npm:firebase"
+          ]
+        },
+        {
+          "file": "packages/firebase/src/lib/firestore.repository.ts",
+          "hash": "1673962519471833525",
+          "deps": [
+            "npm:firebase",
+            "@platform-monorepo/core"
+          ]
         },
         {
           "file": "packages/firebase/tsconfig.json",
@@ -144,69 +206,6 @@
         {
           "file": "packages/firebase/vite.config.ts",
           "hash": "14057552622881076746",
-          "deps": [
-            "npm:vite"
-          ]
-        }
-      ],
-      "@platform-monorepo/core": [
-        {
-          "file": "packages/core/.DS_Store",
-          "hash": "16207136416258287466"
-        },
-        {
-          "file": "packages/core/README.md",
-          "hash": "4369172407730148539"
-        },
-        {
-          "file": "packages/core/eslint.config.mjs",
-          "hash": "2713748763965609622",
-          "deps": [
-            [
-              "npm:jsonc-eslint-parser",
-              "dynamic"
-            ]
-          ]
-        },
-        {
-          "file": "packages/core/package.json",
-          "hash": "12967926382521954505"
-        },
-        {
-          "file": "packages/core/src/.DS_Store",
-          "hash": "1322457605019664569"
-        },
-        {
-          "file": "packages/core/src/index.ts",
-          "hash": "6199817678954938714"
-        },
-        {
-          "file": "packages/core/src/lib/.DS_Store",
-          "hash": "14084404632488199927"
-        },
-        {
-          "file": "packages/core/src/lib/crud-store.interface.ts",
-          "hash": "1912228538851268810"
-        },
-        {
-          "file": "packages/core/src/lib/domain-model.interface.ts",
-          "hash": "3006072110361718485"
-        },
-        {
-          "file": "packages/core/tsconfig.json",
-          "hash": "12834038490315927699"
-        },
-        {
-          "file": "packages/core/tsconfig.lib.json",
-          "hash": "15299785940044794528"
-        },
-        {
-          "file": "packages/core/tsconfig.spec.json",
-          "hash": "12757693314151657395"
-        },
-        {
-          "file": "packages/core/vite.config.ts",
-          "hash": "9403270702477991712",
           "deps": [
             "npm:vite"
           ]

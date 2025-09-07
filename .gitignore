@@ -1,2 +1,7 @@
 vite.config.*.timestamp*
 vitest.config.*.timestamp*
+node_modules
+
+# macOS
+.DS_Store
+.env.local
