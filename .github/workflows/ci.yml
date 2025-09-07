@@ -14,13 +14,11 @@ jobs:
   build_and_test:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Important for Nx to determine "affected" projects
+          fetch-depth: 0
 
-      # 2. Setup Node.js and pnpm
       - name: Set up pnpm
         uses: pnpm/action-setup@v3
         with:
@@ -28,25 +26,23 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Or your desired Node.js version
+          node-version: '20'
           cache: 'pnpm'
 
-      # 3. Install dependencies
       - name: Install dependencies
         run: pnpm install
 
-      # 4. Connect to Nx Cloud (enables remote caching)
-      - name: Connect to Nx Cloud
-        run: pnpm exec nx-cloud start-ci-run --stop-agents-on-failure
+      - name: Lint affected projects
+        run: pnpm exec nx affected --target=lint --parallel=3
         env:
           NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 
-      # 5. Run lint, test, and build on AFFECTED projects only
-      - name: Lint affected projects
-        run: pnpm exec nx affected --target=lint --parallel=3
-
       - name: Test affected projects
         run: pnpm exec nx affected --target=test --parallel=3 --ci --code-coverage
+        env:
+          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 
       - name: Build affected projects
         run: pnpm exec nx affected --target=build --parallel=3
+        env:
+          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
