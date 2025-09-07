@@ -1,48 +1,54 @@
-# .github/workflows/ci.yml
-
 name: CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # needed for Nx affected
 
       - name: Set up pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v4
         with:
-          version: latest
+          version: 10
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20'  
           cache: 'pnpm'
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
 
-      - name: Lint affected projects
-        run: pnpm exec nx affected --target=lint --parallel=3
+      - name: Lint (affected)
+        run: pnpm nx affected -t lint --parallel=3
         env:
           NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 
-      - name: Test affected projects
-        run: pnpm exec nx affected --target=test --parallel=3 --ci --code-coverage
+      - name: Test (affected)
+        run: pnpm nx affected -t test --parallel=3 --ci --code-coverage
         env:
           NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 
-      - name: Build affected projects
-        run: pnpm exec nx affected --target=build --parallel=3
+      - name: Build (affected)
+        run: pnpm nx affected -t build --parallel=3
         env:
           NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+
+      # Fallback: on direct pushes to main, ensure full build (useful when base detection is odd)
+      - name: Build all (push to main only)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: pnpm nx run-many -t build --all --parallel=3
