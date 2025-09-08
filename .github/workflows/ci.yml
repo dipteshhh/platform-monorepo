@@ -11,44 +11,65 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build_and_test:
+  lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # needed for Nx affected
+          fetch-depth: 0
 
-      - name: Set up pnpm
+      - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 10
-
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'  
+          node-version: '20'
           cache: 'pnpm'
 
-      - name: Install deps
+      - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Lint (affected)
+      - name: Lint Affected Projects
         run: pnpm nx affected -t lint --parallel=3
         env:
           NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 
-      - name: Test (affected)
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Test Affected Projects
         run: pnpm nx affected -t test --parallel=3 --ci --code-coverage
         env:
           NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 
-      - name: Build (affected)
-        run: pnpm nx affected -t build --parallel=3
-        env:
-          NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      # Fallback: on direct pushes to main, ensure full build (useful when base detection is odd)
-      - name: Build all (push to main only)
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: pnpm nx run-many -t build --all --parallel=3
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
