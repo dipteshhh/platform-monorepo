@@ -1,7 +1,24 @@
+# Dependencies
+node_modules
+.pnp.*
+
+# Nx
+.nx/cache
+.nx/workspace-data
+
+# Build output
+dist
+build
+
+# Vite
 vite.config.*.timestamp*
 vitest.config.*.timestamp*
-node_modules
+
+# Test results
+coverage
+
+# Local Environment
+.env.local
 
 # macOS
 .DS_Store
-.env.local

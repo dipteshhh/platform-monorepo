@@ -9925,3 +9925,44 @@ Time for 'build typescript dependencies' 0.014665961265563965
 [NX v21.4.1 Daemon Server] - 2025-09-07T13:37:50.946Z - Done responding to the client project-graph
 [NX v21.4.1 Daemon Server] - 2025-09-07T13:37:50.946Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 1.
 [NX v21.4.1 Daemon Server] - 2025-09-07T13:37:50.948Z - Established a connection. Number of open connections: 5
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.793Z - [WATCHER]: .github/workflows/ci.yml was modified
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.794Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.794Z - Done responding to the client File watch changed
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.794Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.794Z - [WATCHER]: Processing file changes in outputs
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.794Z - Time taken for 'changed-projects' 0.10666704177856445ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.895Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.895Z - [REQUEST]: .github/workflows/ci.yml
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.896Z - [REQUEST]: 
+Time for 'nx/core/project-json:createNodes' 1.1232500076293945
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.912Z - [REQUEST]: Responding to the client. handleGlob
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.912Z - Done responding to the client handleGlob
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.912Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.912Z - Time taken for 'hash changed files from watcher' 0.2726249694824219ms
+Time for 'total for sendMessageToDaemon()' 7.903499960899353
+Time for 'deserialize daemon response' 0.04041695594787598
+Time for 'nx/core/package-json:createNodes' 6.937916994094849
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.913Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.914Z - Done responding to the client handleHashMultiGlob
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.914Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+Time for '@nx/js/typescript:createNodes' 15.778666973114014
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.915Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.915Z - Done responding to the client handleHashMultiGlob
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.915Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+Time for '@nx/vite/plugin:createNodes' 10.88937497138977
+Time for 'total for sendMessageToDaemon()' 2.526041030883789
+Time for 'deserialize daemon response' 0.022624969482421875
+Time for '@nx/eslint/plugin:createNodes' 13.389249920845032
+Time for 'total for sendMessageToDaemon()' 2.944374918937683
+Time for 'deserialize daemon response' 0.017457962036132812
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 10.157624959945679
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.927Z - Time taken for 'build-project-configs' 24.776957988739014ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.930Z - Time taken for '@nx/js/typescript:createDependencies' 6.887207984924316ms
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.930Z - Time taken for '@nx/vite/plugin:createDependencies' 5.350625038146973ms
+Time for 'build typescript dependencies' 0.011875033378601074
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.942Z - Wrote project graph cache to /Users/diptesh/Projects/platform-monorepo/.nx/workspace-data/project-graph.json
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.942Z - [SYNC]: collect registered sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.942Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.942Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.942Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.4.1 Daemon Server] - 2025-09-07T13:38:07.942Z - Time taken for 'total execution time for createProjectGraph()' 14.127541899681091ms
