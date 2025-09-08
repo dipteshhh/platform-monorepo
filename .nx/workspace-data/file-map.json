@@ -41,56 +41,8 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".gitignore",
-        "hash": "5487648061291393636"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "14688272390704683536"
-      },
-      {
-        "file": "pnpm-lock.yaml",
-        "hash": "2390433407037106180"
-      },
-      {
-        "file": ".github/workflows/ci.yml",
-        "hash": "15281721816136026909"
-      },
-      {
-        "file": "nx.json",
-        "hash": "2767877594474709220"
-      },
-      {
-        "file": ".github/instructions/nx.instructions.md",
-        "hash": "18365136242425077636"
-      },
-      {
         "file": ".prettierrc",
         "hash": "16267754514737964994"
-      },
-      {
-        "file": "pnpm-workspace.yaml",
-        "hash": "414265049992887245"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "5606483387161516153"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "5952729833988513149"
-      },
-      {
-        "file": "eslint.config.mjs",
-        "hash": "8944620160701465"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "7859791200992673831"
-      },
-      {
-        "file": ".github/workflo",
-        "hash": "3244421341483603138"
       },
       {
         "file": "vitest.workspace.ts",
@@ -99,60 +51,61 @@
       {
         "file": "package.json",
         "hash": "8946584189002092523"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "2390433407037106180"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "5952729833988513149"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "14688272390704683536"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "5606483387161516153"
+      },
+      {
+        "file": "nx.json",
+        "hash": "2767877594474709220"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "7859791200992673831"
+      },
+      {
+        "file": "README.md",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "8944620160701465"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "15281721816136026909"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "414265049992887245"
+      },
+      {
+        "file": ".github/workflo",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".github/instructions/nx.instructions.md",
+        "hash": "18365136242425077636"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "8407971410693672134"
       }
     ],
     "projectFileMap": {
-      "@platform-monorepo/core": [
-        {
-          "file": "packages/core/README.md",
-          "hash": "4369172407730148539"
-        },
-        {
-          "file": "packages/core/eslint.config.mjs",
-          "hash": "2713748763965609622",
-          "deps": [
-            [
-              "npm:jsonc-eslint-parser",
-              "dynamic"
-            ]
-          ]
-        },
-        {
-          "file": "packages/core/package.json",
-          "hash": "12967926382521954505"
-        },
-        {
-          "file": "packages/core/src/index.ts",
-          "hash": "6199817678954938714"
-        },
-        {
-          "file": "packages/core/src/lib/crud-store.interface.ts",
-          "hash": "1912228538851268810"
-        },
-        {
-          "file": "packages/core/src/lib/domain-model.interface.ts",
-          "hash": "3006072110361718485"
-        },
-        {
-          "file": "packages/core/tsconfig.json",
-          "hash": "12834038490315927699"
-        },
-        {
-          "file": "packages/core/tsconfig.lib.json",
-          "hash": "15299785940044794528"
-        },
-        {
-          "file": "packages/core/tsconfig.spec.json",
-          "hash": "12757693314151657395"
-        },
-        {
-          "file": "packages/core/vite.config.ts",
-          "hash": "9403270702477991712",
-          "deps": [
-            "npm:vite"
-          ]
-        }
-      ],
       "@platform-monorepo/firebase": [
         {
           "file": "packages/firebase/README.md",
@@ -210,6 +163,64 @@
         {
           "file": "packages/firebase/vite.config.ts",
           "hash": "14057552622881076746",
+          "deps": [
+            "npm:vite"
+          ]
+        }
+      ],
+      "@platform-monorepo/core": [
+        {
+          "file": "packages/core/README.md",
+          "hash": "4369172407730148539"
+        },
+        {
+          "file": "packages/core/eslint.config.mjs",
+          "hash": "2713748763965609622",
+          "deps": [
+            [
+              "npm:jsonc-eslint-parser",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "packages/core/package.json",
+          "hash": "12967926382521954505"
+        },
+        {
+          "file": "packages/core/src/index.ts",
+          "hash": "6199817678954938714"
+        },
+        {
+          "file": "packages/core/src/lib/crud-store.interface.ts",
+          "hash": "1912228538851268810"
+        },
+        {
+          "file": "packages/core/src/lib/crud-store.spec.ts",
+          "hash": "2583253975811624958",
+          "deps": [
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "packages/core/src/lib/domain-model.interface.ts",
+          "hash": "3006072110361718485"
+        },
+        {
+          "file": "packages/core/tsconfig.json",
+          "hash": "14866450519102331960"
+        },
+        {
+          "file": "packages/core/tsconfig.lib.json",
+          "hash": "7547460633146403395"
+        },
+        {
+          "file": "packages/core/tsconfig.spec.json",
+          "hash": "15212813892589195922"
+        },
+        {
+          "file": "packages/core/vite.config.ts",
+          "hash": "9403270702477991712",
           "deps": [
             "npm:vite"
           ]

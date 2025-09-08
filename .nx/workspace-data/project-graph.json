@@ -9972,6 +9972,11 @@
       },
       {
         "source": "@platform-monorepo/core",
+        "target": "npm:vitest",
+        "type": "static"
+      },
+      {
+        "source": "@platform-monorepo/core",
         "target": "npm:vite",
         "type": "static"
       }
@@ -22498,5 +22503,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1757252287938
+  "computedAt": 1757351627792
 }

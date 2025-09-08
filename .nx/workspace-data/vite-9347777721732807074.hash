@@ -2546,5 +2546,1279 @@
     },
     "metadata": {},
     "projectType": "application"
+  },
+  "10166764927210950966packages/core/vite.config.ts": {
+    "targets": {
+      "test": {
+        "command": "vitest",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "vitest"
+            ]
+          },
+          {
+            "env": "CI"
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/test-output/vitest/coverage"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite tests",
+          "help": {
+            "command": "pnpm exec vitest --help",
+            "example": {
+              "options": {
+                "bail": 1,
+                "coverage": true
+              }
+            }
+          }
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --build --emitDeclarationOnly",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc --build --help",
+            "example": {
+              "args": [
+                "--force"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          "^typecheck"
+        ],
+        "syncGenerators": [
+          "@nx/js:typescript-sync"
+        ]
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects @platform-monorepo/core --includeDependentProjects -- pnpm exec nx build-deps @platform-monorepo/core"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "1599321239577420239packages/core/vite.config.ts": {
+    "targets": {
+      "test": {
+        "command": "vitest",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "vitest"
+            ]
+          },
+          {
+            "env": "CI"
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/test-output/vitest/coverage"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite tests",
+          "help": {
+            "command": "pnpm exec vitest --help",
+            "example": {
+              "options": {
+                "bail": 1,
+                "coverage": true
+              }
+            }
+          }
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --build --emitDeclarationOnly",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc --build --help",
+            "example": {
+              "args": [
+                "--force"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          "^typecheck"
+        ],
+        "syncGenerators": [
+          "@nx/js:typescript-sync"
+        ]
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects @platform-monorepo/core --includeDependentProjects -- pnpm exec nx build-deps @platform-monorepo/core"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "14736075835756109877packages/core/vite.config.ts": {
+    "targets": {
+      "test": {
+        "command": "vitest",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "vitest"
+            ]
+          },
+          {
+            "env": "CI"
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/test-output/vitest/coverage"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite tests",
+          "help": {
+            "command": "pnpm exec vitest --help",
+            "example": {
+              "options": {
+                "bail": 1,
+                "coverage": true
+              }
+            }
+          }
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --build --emitDeclarationOnly",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc --build --help",
+            "example": {
+              "args": [
+                "--force"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          "^typecheck"
+        ],
+        "syncGenerators": [
+          "@nx/js:typescript-sync"
+        ]
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects @platform-monorepo/core --includeDependentProjects -- pnpm exec nx build-deps @platform-monorepo/core"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "7843737966708802677packages/core/vite.config.ts": {
+    "targets": {
+      "test": {
+        "command": "vitest",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "vitest"
+            ]
+          },
+          {
+            "env": "CI"
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/test-output/vitest/coverage"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite tests",
+          "help": {
+            "command": "pnpm exec vitest --help",
+            "example": {
+              "options": {
+                "bail": 1,
+                "coverage": true
+              }
+            }
+          }
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --build --emitDeclarationOnly",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc --build --help",
+            "example": {
+              "args": [
+                "--force"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          "^typecheck"
+        ],
+        "syncGenerators": [
+          "@nx/js:typescript-sync"
+        ]
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects @platform-monorepo/core --includeDependentProjects -- pnpm exec nx build-deps @platform-monorepo/core"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "14424100363773727008packages/core/vite.config.ts": {
+    "targets": {
+      "test": {
+        "command": "vitest",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "vitest"
+            ]
+          },
+          {
+            "env": "CI"
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/test-output/vitest/coverage"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite tests",
+          "help": {
+            "command": "pnpm exec vitest --help",
+            "example": {
+              "options": {
+                "bail": 1,
+                "coverage": true
+              }
+            }
+          }
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --build --emitDeclarationOnly",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc --build --help",
+            "example": {
+              "args": [
+                "--force"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          "^typecheck"
+        ],
+        "syncGenerators": [
+          "@nx/js:typescript-sync"
+        ]
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects @platform-monorepo/core --includeDependentProjects -- pnpm exec nx build-deps @platform-monorepo/core"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "6483777787459875945packages/core/vite.config.ts": {
+    "targets": {
+      "test": {
+        "command": "vitest",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "vitest"
+            ]
+          },
+          {
+            "env": "CI"
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/test-output/vitest/coverage"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite tests",
+          "help": {
+            "command": "pnpm exec vitest --help",
+            "example": {
+              "options": {
+                "bail": 1,
+                "coverage": true
+              }
+            }
+          }
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --build --emitDeclarationOnly",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc --build --help",
+            "example": {
+              "args": [
+                "--force"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          "^typecheck"
+        ],
+        "syncGenerators": [
+          "@nx/js:typescript-sync"
+        ]
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects @platform-monorepo/core --includeDependentProjects -- pnpm exec nx build-deps @platform-monorepo/core"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "1090744935687382043packages/core/vite.config.ts": {
+    "targets": {
+      "test": {
+        "command": "vitest",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "vitest"
+            ]
+          },
+          {
+            "env": "CI"
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/test-output/vitest/coverage"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite tests",
+          "help": {
+            "command": "pnpm exec vitest --help",
+            "example": {
+              "options": {
+                "bail": 1,
+                "coverage": true
+              }
+            }
+          }
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --build --emitDeclarationOnly",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc --build --help",
+            "example": {
+              "args": [
+                "--force"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          "^typecheck"
+        ],
+        "syncGenerators": [
+          "@nx/js:typescript-sync"
+        ]
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects @platform-monorepo/core --includeDependentProjects -- pnpm exec nx build-deps @platform-monorepo/core"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "10189257532768449881packages/core/vite.config.ts": {
+    "targets": {
+      "test": {
+        "command": "vitest",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "vitest"
+            ]
+          },
+          {
+            "env": "CI"
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/test-output/vitest/coverage"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite tests",
+          "help": {
+            "command": "pnpm exec vitest --help",
+            "example": {
+              "options": {
+                "bail": 1,
+                "coverage": true
+              }
+            }
+          }
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --build --emitDeclarationOnly",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc --build --help",
+            "example": {
+              "args": [
+                "--force"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          "^typecheck"
+        ],
+        "syncGenerators": [
+          "@nx/js:typescript-sync"
+        ]
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects @platform-monorepo/core --includeDependentProjects -- pnpm exec nx build-deps @platform-monorepo/core"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "10819933056883581406packages/core/vite.config.ts": {
+    "targets": {
+      "test": {
+        "command": "vitest",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "vitest"
+            ]
+          },
+          {
+            "env": "CI"
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/test-output/vitest/coverage"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite tests",
+          "help": {
+            "command": "pnpm exec vitest --help",
+            "example": {
+              "options": {
+                "bail": 1,
+                "coverage": true
+              }
+            }
+          }
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --build --emitDeclarationOnly",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc --build --help",
+            "example": {
+              "args": [
+                "--force"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          "^typecheck"
+        ],
+        "syncGenerators": [
+          "@nx/js:typescript-sync"
+        ]
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects @platform-monorepo/core --includeDependentProjects -- pnpm exec nx build-deps @platform-monorepo/core"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "16351350220030947454packages/core/vite.config.ts": {
+    "targets": {
+      "test": {
+        "command": "vitest",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "vitest"
+            ]
+          },
+          {
+            "env": "CI"
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/test-output/vitest/coverage"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite tests",
+          "help": {
+            "command": "pnpm exec vitest --help",
+            "example": {
+              "options": {
+                "bail": 1,
+                "coverage": true
+              }
+            }
+          }
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --build --emitDeclarationOnly",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc --build --help",
+            "example": {
+              "args": [
+                "--force"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          "^typecheck"
+        ],
+        "syncGenerators": [
+          "@nx/js:typescript-sync"
+        ]
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects @platform-monorepo/core --includeDependentProjects -- pnpm exec nx build-deps @platform-monorepo/core"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "10923821845332456094packages/core/vite.config.ts": {
+    "targets": {
+      "test": {
+        "command": "vitest",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "vitest"
+            ]
+          },
+          {
+            "env": "CI"
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/test-output/vitest/coverage"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite tests",
+          "help": {
+            "command": "pnpm exec vitest --help",
+            "example": {
+              "options": {
+                "bail": 1,
+                "coverage": true
+              }
+            }
+          }
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --build --emitDeclarationOnly",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc --build --help",
+            "example": {
+              "args": [
+                "--force"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          "^typecheck"
+        ],
+        "syncGenerators": [
+          "@nx/js:typescript-sync"
+        ]
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects @platform-monorepo/core --includeDependentProjects -- pnpm exec nx build-deps @platform-monorepo/core"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "11383921436895074054packages/core/vite.config.ts": {
+    "targets": {
+      "test": {
+        "command": "vitest",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "vitest"
+            ]
+          },
+          {
+            "env": "CI"
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/test-output/vitest/coverage"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite tests",
+          "help": {
+            "command": "pnpm exec vitest --help",
+            "example": {
+              "options": {
+                "bail": 1,
+                "coverage": true
+              }
+            }
+          }
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --build --emitDeclarationOnly",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc --build --help",
+            "example": {
+              "args": [
+                "--force"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          "^typecheck"
+        ],
+        "syncGenerators": [
+          "@nx/js:typescript-sync"
+        ]
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects @platform-monorepo/core --includeDependentProjects -- pnpm exec nx build-deps @platform-monorepo/core"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "16581921000354850957packages/core/vite.config.ts": {
+    "targets": {
+      "test": {
+        "command": "vitest",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "vitest"
+            ]
+          },
+          {
+            "env": "CI"
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/test-output/vitest/coverage"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite tests",
+          "help": {
+            "command": "pnpm exec vitest --help",
+            "example": {
+              "options": {
+                "bail": 1,
+                "coverage": true
+              }
+            }
+          }
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --build --emitDeclarationOnly",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc --build --help",
+            "example": {
+              "args": [
+                "--force"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          "^typecheck"
+        ],
+        "syncGenerators": [
+          "@nx/js:typescript-sync"
+        ]
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects @platform-monorepo/core --includeDependentProjects -- pnpm exec nx build-deps @platform-monorepo/core"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
+  },
+  "15293502848963852649packages/core/vite.config.ts": {
+    "targets": {
+      "test": {
+        "command": "vitest",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "vitest"
+            ]
+          },
+          {
+            "env": "CI"
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/test-output/vitest/coverage"
+        ],
+        "metadata": {
+          "technologies": [
+            "vite"
+          ],
+          "description": "Run Vite tests",
+          "help": {
+            "command": "pnpm exec vitest --help",
+            "example": {
+              "options": {
+                "bail": 1,
+                "coverage": true
+              }
+            }
+          }
+        }
+      },
+      "typecheck": {
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "typescript"
+            ]
+          }
+        ],
+        "command": "tsc --build --emitDeclarationOnly",
+        "options": {
+          "cwd": "packages/core"
+        },
+        "metadata": {
+          "description": "Runs type-checking for the project.",
+          "technologies": [
+            "typescript"
+          ],
+          "help": {
+            "command": "pnpm exec tsc --build --help",
+            "example": {
+              "args": [
+                "--force"
+              ]
+            }
+          }
+        },
+        "dependsOn": [
+          "^typecheck"
+        ],
+        "syncGenerators": [
+          "@nx/js:typescript-sync"
+        ]
+      },
+      "build-deps": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "watch-deps": {
+        "continuous": true,
+        "dependsOn": [
+          "build-deps"
+        ],
+        "command": "pnpm exec nx watch --projects @platform-monorepo/core --includeDependentProjects -- pnpm exec nx build-deps @platform-monorepo/core"
+      }
+    },
+    "metadata": {},
+    "projectType": "application"
   }
 }
