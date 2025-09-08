@@ -1,13 +1,11 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "nxCloudId": "68bc9f500edeab7b22ad656e",
+  "nxCloudId": "68bf17c31178a4abfe46211a",
   "plugins": [
     {
       "plugin": "@nx/js/typescript",
       "options": {
-        "typecheck": {
-          "targetName": "typecheck"
-        },
+        "typecheck": { "targetName": "typecheck" },
         "build": {
           "targetName": "build",
           "configName": "tsconfig.lib.json",
@@ -16,12 +14,7 @@
         }
       }
     },
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
-    },
+    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
     {
       "plugin": "@nx/vite/plugin",
       "options": {
@@ -43,8 +36,6 @@
       "dependsOn": ["^build"],
       "inputs": ["default", "^default"]
     },
-    "test": {
-      "dependsOn": ["^build"]
-    }
+    "test": { "dependsOn": ["^build"] }
   }
 }
